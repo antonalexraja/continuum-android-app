@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Navigation instruction view dimensions (default / portrait) -->
+    <dimen name="nav_icon_size">64dp</dimen>
+    <dimen name="nav_distance_text_size">32sp</dimen>
+    <dimen name="nav_instruction_text_size">16sp</dimen>
+    <dimen name="nav_street_text_size">18sp</dimen>
+    <dimen name="nav_corner_radius">12dp</dimen>
+    <dimen name="nav_instruction_padding_horizontal">16dp</dimen>
+    <dimen name="nav_instruction_padding_vertical">12dp</dimen>
+    <dimen name="nav_instruction_text_margin_start">16dp</dimen>
+    <dimen name="nav_bottom_bar_padding_horizontal">16dp</dimen>
+    <dimen name="nav_bottom_bar_padding_vertical">8dp</dimen>
+</resources>

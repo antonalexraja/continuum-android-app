@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Continuum</string>
+    <string name="navigation_service_channel">Navigation Service</string>
+    <string name="navigation_notification_title">Navigation Active</string>
+    <string name="navigation_notification_text">Tracking your position...</string>
+    <!-- Replay service -->
+    <string name="replay_service_channel">Trip Replay Service</string>
+    <string name="replay_notification_title">Trip Replay</string>
+</resources>

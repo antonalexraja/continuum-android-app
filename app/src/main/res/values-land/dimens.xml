@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Landscape overrides: smaller UI to preserve vertical map space -->
+    <dimen name="nav_icon_size">48dp</dimen>
+    <dimen name="nav_distance_text_size">24sp</dimen>
+    <dimen name="nav_instruction_text_size">14sp</dimen>
+    <dimen name="nav_street_text_size">16sp</dimen>
+    <dimen name="nav_corner_radius">10dp</dimen>
+    <dimen name="nav_instruction_padding_horizontal">12dp</dimen>
+    <dimen name="nav_instruction_padding_vertical">8dp</dimen>
+    <dimen name="nav_instruction_text_margin_start">12dp</dimen>
+    <dimen name="nav_bottom_bar_padding_horizontal">12dp</dimen>
+    <dimen name="nav_bottom_bar_padding_vertical">6dp</dimen>
+</resources>

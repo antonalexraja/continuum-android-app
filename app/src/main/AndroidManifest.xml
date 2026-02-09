@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
+    <!-- Internet for Google Maps (not needed for offline maps) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Storage for offline map files -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@android:drawable/ic_menu_mylocation"
+        android:label="@string/app_name"
+        android:roundIcon="@android:drawable/ic_menu_mylocation"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Navigator"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="34">
+
+        <!-- Google Maps API Key (set MAPS_API_KEY in local.properties) -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+
+        <activity
+            android:name="com.continuum.navigator.core.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Navigator">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Map Activity -->
+        <activity
+            android:name="com.continuum.navigator.core.map.MapActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Navigator" />
+
+        <!-- Route Navigation Demo Activity -->
+        <activity
+            android:name="com.navigator.core.com.continuum.navigator.core.routing.RouteNavigationDemoActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Navigator" />
+
+        <!-- Navigation Foreground Service -->
+        <service
+            android:name="com.continuum.navigator.core.service.NavigationService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+
+        <!-- Trip Replay Service -->
+        <service
+            android:name="com.continuum.navigator.core.service.TripReplayService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+
+    </application>
+
+</manifest>
